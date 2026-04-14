@@ -45,7 +45,7 @@ function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="text-white font-black text-xl tracking-tight"
         >
-          <span className="text-red-600">WOLF FITNESS</span>
+          <span className="text-red-600">WOLF FAMILY</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">

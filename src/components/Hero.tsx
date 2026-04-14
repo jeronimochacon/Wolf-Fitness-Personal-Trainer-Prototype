@@ -20,19 +20,19 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 bg-red-600/10 border border-red-600/30 rounded-full px-4 py-2 w-fit">
             <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            <span className="text-red-400 text-sm font-medium tracking-wide uppercase">Science-Backed Coaching</span>
+            <span className="text-red-400 text-sm font-medium tracking-wide uppercase">Entrenamiento Basado en Ciencia</span>
           </div>
 
-          <h1 className="text-5xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight">
-            No Excuses.
+          <h1 className="text-5xl lg:text-6xl font-black text-white leading-[1.05] tracking-tight">
+            Consigue el Cuerpo
             <br />
-            <span className="text-red-600">No Limits.</span>
+            <span className="">que Siempre</span>
             <br />
-            Just Results.
+            <span className="text-red-600">Soñaste</span>
           </h1>
 
           <p className="text-gray-300 text-lg lg:text-xl leading-relaxed max-w-lg">
-            Andres Wolf helps you build sustainable strength through science-backed coaching. Your transformation starts where your comfort zone ends.
+            Alcanza tus metas más ambiciosas entrenando con un plan, constancia y dedicación de la misma forma que yo lo hice.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start">
@@ -42,10 +42,10 @@ export default function Hero() {
               onClick={scrollToPricing}
               className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-red-900/40"
             >
-              Start My Evolution
+              Unirme a <br /> Wolf Family
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </motion.button>
-            <div className="flex items-center gap-3 text-gray-400 text-sm pt-1 sm:pt-3">
+            <div className="flex items-center gap-3 text-gray-400 text-sm pt-1 sm:pt-7">
               <div className="flex -space-x-2">
                 {['M', 'S', 'L'].map((initial, i) => (
                   <div key={i} className="w-8 h-8 rounded-full bg-[#1A1A1A] border-2 border-[#0A0A0A] flex items-center justify-center text-xs text-gray-300 font-semibold">
@@ -53,7 +53,7 @@ export default function Hero() {
                   </div>
                 ))}
               </div>
-              <span>300+ transformations completed</span>
+              <span>300+ Transformaciones Completadas</span>
             </div>
           </div>
 
@@ -97,10 +97,10 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">Andres Wolf</p>
-                  <p className="text-gray-400 text-xs">Performance Optimization Coach</p>
+                  <p className="text-gray-400 text-xs">Coach Fitness Certificado</p>
                 </div>
                 <div className="ml-auto flex gap-1">
-                  {[1,2,3,4,5].map((s) => (
+                  {[1, 2, 3, 4, 5].map((s) => (
                     <span key={s} className="text-red-500 text-xs">★</span>
                   ))}
                 </div>
