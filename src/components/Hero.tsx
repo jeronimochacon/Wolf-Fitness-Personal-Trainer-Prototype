@@ -59,9 +59,9 @@ export default function Hero() {
 
           <div className="grid grid-cols-3 gap-6 pt-4 border-t border-white/10">
             {[
-              { value: '300+', label: 'Clients Transformed' },
-              { value: '8yr', label: 'Coaching Experience' },
-              { value: '97%', label: 'Retention Rate' },
+              { value: '300+', label: 'Clientes Transformados' },
+              { value: '8 Años', label: 'Coach Experimentado' },
+              { value: '97%', label: 'Tasa de Retención' },
             ].map((stat) => (
               <div key={stat.label} className="flex flex-col gap-1">
                 <span className="text-2xl lg:text-3xl font-black text-white">{stat.value}</span>

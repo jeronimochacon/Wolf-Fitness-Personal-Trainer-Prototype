@@ -60,7 +60,7 @@ export default function Method() {
         >
           <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">The System</span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
-            The <span className="text-red-600">Wolf Method</span>
+            El <span className="text-red-600">Sistema Wolf</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
             A three-phase framework built on sport science, not bro-science. Repeatable. Scalable. Proven.
