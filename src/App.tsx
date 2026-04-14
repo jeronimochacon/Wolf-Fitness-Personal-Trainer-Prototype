@@ -24,9 +24,9 @@ function Navbar() {
   };
 
   const navLinks = [
-    { label: 'Method', id: 'method' },
-    { label: 'Results', id: 'testimonials' },
-    { label: 'Pricing', id: 'pricing' },
+    { label: 'Sistema', id: 'method' },
+    { label: 'Resultados', id: 'testimonials' },
+    { label: 'Precios', id: 'pricing' },
     { label: 'FAQ', id: 'faq' },
   ];
 

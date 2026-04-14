@@ -16,10 +16,10 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: 'Mark S.',
-    handle: 'Busy Executive, 40',
-    quote: "Andres changed my perspective on 'busy.' Best shape of my life at 40.",
+    handle: 'Ejecutivo Ocupado, 40',
+    quote: "Andres cambió mi perspectiva sobre lo que es estar 'ocupado'. Estoy en la mejor forma de mi vida a los 40.",
     result: '20% → 10%',
-    resultLabel: 'Body Fat Reduction',
+    resultLabel: 'Reducción de Grasa',
     image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200',
     beforeAfter: {
       before: 'https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -28,10 +28,10 @@ const testimonials: Testimonial[] = [
   },
   {
     name: 'Sarah J.',
-    handle: 'Post-Pregnancy Transformation',
-    quote: 'The personalized approach for my specific recovery was exactly what I needed.',
-    result: '−28 lbs',
-    resultLabel: 'Post-Pregnancy Transformation',
+    handle: 'Transformación Posparto',
+    quote: 'El enfoque personalizado para mi recuperación específica fue exactamente lo que necesitaba.',
+    result: '−12 kg',
+    resultLabel: 'Recuperación Técnica',
     image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
     beforeAfter: {
       before: 'https://images.pexels.com/photos/4164766/pexels-photo-4164766.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -40,10 +40,10 @@ const testimonials: Testimonial[] = [
   },
   {
     name: 'Leo R.',
-    handle: 'Athletic Build Journey',
-    quote: 'Broke through my plateau. Nutrition was the missing piece.',
-    result: 'Skinny → Athletic',
-    resultLabel: 'Full Body Recomposition',
+    handle: 'Desarrollo Atlético',
+    quote: 'Rompí mi estancamiento. La nutrición fue la pieza que faltaba en mi entrenamiento.',
+    result: 'Delgado → Atlético',
+    resultLabel: 'Fuerza & Masa Muscular',
     image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200',
     beforeAfter: {
       before: 'https://images.pexels.com/photos/4164513/pexels-photo-4164513.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -69,20 +69,20 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
           <div className="relative overflow-hidden">
             <img
               src={testimonial.beforeAfter.before}
-              alt="Before transformation"
+              alt="Antes de la transformación"
               className="w-full h-full object-cover grayscale"
             />
             <div className="absolute inset-0 bg-black/40" />
-            <span className="absolute bottom-2 left-2 text-xs text-white/70 font-medium bg-black/50 px-2 py-0.5 rounded">Before</span>
+            <span className="absolute bottom-2 left-2 text-xs text-white/70 font-medium bg-black/50 px-2 py-0.5 rounded">Antes</span>
           </div>
           <div className="relative overflow-hidden">
             <img
               src={testimonial.beforeAfter.after}
-              alt="After transformation"
+              alt="Después de la transformación"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-red-900/20" />
-            <span className="absolute bottom-2 right-2 text-xs text-white/70 font-medium bg-black/50 px-2 py-0.5 rounded">After</span>
+            <span className="absolute bottom-2 right-2 text-xs text-white/70 font-medium bg-black/50 px-2 py-0.5 rounded">Después</span>
           </div>
         </div>
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent" />
@@ -130,12 +130,12 @@ export default function Testimonials() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-16"
         >
-          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">Real Results</span>
+          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">Resultados Reales</span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
-            Transformations That <span className="text-red-600">Speak</span>
+            Transformaciones que <span className="text-red-600">Hablan</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            Every body-recomposition journey is unique. Here's what clients achieved with science-backed programming.
+            Cada viaje de recomposición corporal es único. Mira lo que mis clientes han logrado con programación basada en ciencia.
           </p>
         </motion.div>
 

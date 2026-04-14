@@ -29,22 +29,22 @@ interface Plan {
 
 const plans: Plan[] = [
   {
-    name: 'Basic',
+    name: 'Básico',
     price: '$29',
-    period: '/mo',
-    description: 'Build your foundation with proven programming.',
+    period: '/mes',
+    description: 'Construye tu base con programación probada.',
     features: [
-      'PDF training programs',
-      'Community access',
-      'Automated check-ins',
-      'Movement library',
-      'Nutrition fundamentals guide',
+      'Programas de entrenamiento en PDF',
+      'Acceso a la comunidad',
+      'Check-ins automatizados',
+      'Biblioteca de movimientos',
+      'Guía técnica de nutrición',
     ],
     highlighted: false,
     payuData: {
       merchantId: '508029',
       accountId: '512321',
-      description: 'Andres Wolf Coaching - Basic Plan',
+      description: 'Andres Wolf Coaching - Plan Básico',
       referenceCode: 'WOLF_BASIC_001',
       amount: '29.00',
       tax: '0',
@@ -57,24 +57,24 @@ const plans: Plan[] = [
     },
   },
   {
-    name: 'Intermediate',
+    name: 'Intermedio',
     price: '$59',
-    period: '/mo',
-    description: 'Precision coaching for accelerated body-recomposition.',
+    period: '/mes',
+    description: 'Coaching de precisión para una recomposición corporal acelerada.',
     features: [
-      'Everything in Basic',
-      'Custom macro breakdown',
-      'Weekly form review videos',
-      'Direct chat with Andres',
-      'Monthly program adjustments',
-      'Supplement stack guidance',
+      'Todo lo del plan Básico',
+      'Desglose de macros personalizado',
+      'Videos semanales de revisión técnica',
+      'Chat directo con Andres',
+      'Ajustes mensuales del programa',
+      'Guía de suplementación',
     ],
     highlighted: true,
-    badge: 'Best Value',
+    badge: 'Recomendado',
     payuData: {
       merchantId: '508029',
       accountId: '512321',
-      description: 'Andres Wolf Coaching - Intermediate Plan',
+      description: 'Andres Wolf Coaching - Plan Intermedio',
       referenceCode: 'WOLF_INTER_001',
       amount: '59.00',
       tax: '0',
@@ -87,23 +87,23 @@ const plans: Plan[] = [
     },
   },
   {
-    name: 'Advanced',
+    name: 'Avanzado',
     price: '$99',
-    period: '/mo',
-    description: 'Elite performance-optimization with full access.',
+    period: '/mes',
+    description: 'Optimización de rendimiento élite con acceso total.',
     features: [
-      'Everything in Intermediate',
-      'Bi-weekly 1-on-1 Zoom calls',
-      'Bloodwork & biomarker analysis',
-      '24-hour priority response',
-      'Advanced periodization planning',
-      'Travel & lifestyle adaptation',
+      'Todo lo del plan Intermedio',
+      'Llamadas Zoom 1-a-1 Quincenales',
+      'Análisis de biomarcadores',
+      'Prioridad de respuesta 24h',
+      'Periodización avanzada',
+      'Adaptación a viajes y estilo de vida',
     ],
     highlighted: false,
     payuData: {
       merchantId: '508029',
       accountId: '512321',
-      description: 'Andres Wolf Coaching - Advanced Plan',
+      description: 'Andres Wolf Coaching - Plan Avanzado',
       referenceCode: 'WOLF_ADV_001',
       amount: '99.00',
       tax: '0',
@@ -187,13 +187,13 @@ function PricingCard({ plan, index }: { plan: Plan; index: number }) {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             type="submit"
-            className={`w-full py-4 rounded-xl font-bold text-base transition-colors duration-200 ${
+            className={`w-full py-4 rounded-xl font-bold text-base transition-all duration-200 ${
               plan.highlighted
-                ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/30'
+                ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-900/30 hover:shadow-[0_0_20px_rgba(220,38,38,0.5)]'
                 : 'bg-white/5 hover:bg-white/10 text-white border border-white/10'
             }`}
           >
-            Start My Evolution
+            Empezar mi Evolución
           </motion.button>
         </form>
       </div>
@@ -217,12 +217,12 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">Invest In Yourself</span>
+          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">Invierte en ti</span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
-            Choose Your <span className="text-red-600">Path</span>
+            Elige tu <span className="text-red-600">Camino</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            No long-term lock-ins. Cancel anytime. Every plan includes access to the Wolf Method framework.
+            Sin contratos a largo plazo. Cancela cuando quieras. Cada plan incluye acceso al Método Wolf.
           </p>
         </motion.div>
 
@@ -238,7 +238,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-gray-600 text-sm mt-10"
         >
-          All plans include a 7-day money-back guarantee. Secure checkout via PayU.
+          Todos los planes incluyen garantía de devolución de 7 días. Pago seguro vía PayU.
         </motion.p>
       </div>
     </section>

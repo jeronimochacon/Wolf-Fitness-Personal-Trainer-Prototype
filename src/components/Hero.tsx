@@ -40,7 +40,7 @@ export default function Hero() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={scrollToPricing}
-              className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-red-900/40"
+              className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-red-900/40 hover:shadow-[0_0_25px_rgba(220,38,38,0.6)]"
             >
               Unirme a <br /> Wolf Family
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -75,12 +75,12 @@ export default function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-          className="relative hidden lg:block"
+          className="relative block mt-12 lg:mt-0"
         >
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] border border-white/5 shadow-2xl">
             <img
-              src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Athletic performance coaching"
+              src="/assets/hero-wolf.jpg"
+              alt="Entrenamiento de alto rendimiento Wolf Fitness"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/60 via-transparent to-transparent" />

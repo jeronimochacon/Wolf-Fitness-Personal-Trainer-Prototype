@@ -16,29 +16,29 @@ const steps: Step[] = [
   {
     number: '01',
     icon: <Target className="w-7 h-7" />,
-    title: 'Assessment',
-    subtitle: 'Define Your Baseline',
+    title: 'Evaluación',
+    subtitle: 'Define tu Punto de Partida',
     description:
-      'We start with a comprehensive performance-optimization audit — movement patterns, metabolic markers, lifestyle demands, and recovery capacity. No guesswork, only data.',
-    tags: ['Movement Screen', 'Lifestyle Audit', 'Goal Mapping'],
+      'Comenzamos con una auditoría integral de optimización del rendimiento: patrones de movimiento, marcadores metabólicos, demandas del estilo de vida y capacidad de recuperación. Sin adivinanzas, solo datos.',
+    tags: ['Análisis de Movimiento', 'Auditoría de Vida', 'Mapeo de Metas'],
   },
   {
     number: '02',
     icon: <Activity className="w-7 h-7" />,
-    title: 'Optimization',
-    subtitle: 'Calibrate Your Engine',
+    title: 'Optimización',
+    subtitle: 'Calibra tu Motor',
     description:
-      'Your custom program is engineered for maximum efficiency. Periodized training blocks and precision macro targets are dialed in to trigger consistent body-recomposition.',
-    tags: ['Custom Macros', 'Periodization', 'Recovery Protocol'],
+      'Tu programa personalizado está diseñado para la máxima eficiencia. Los bloques de entrenamiento periodizados y los objetivos macro de precisión están ajustados para desencadenar una recomposición corporal constante.',
+    tags: ['Macros Personalizados', 'Periodización', 'Protocolo de Recuperación'],
   },
   {
     number: '03',
     icon: <TrendingUp className="w-7 h-7" />,
-    title: 'Evolution',
-    subtitle: 'Compound Your Progress',
+    title: 'Evolución',
+    subtitle: 'Potencia tu Progreso',
     description:
-      'Weekly data check-ins drive continuous adaptation. As your performance improves, your program evolves. Plateaus become launching pads.',
-    tags: ['Weekly Check-ins', 'Program Progression', 'Long-Term Results'],
+      'Los controles semanales de datos impulsan la adaptación continua. A medida que mejora tu rendimiento, tu programa evoluciona. Los estancamientos se convierten en plataformas de lanzamiento.',
+    tags: ['Check-ins Semanales', 'Progresión Constante', 'Resultados Reales'],
   },
 ];
 
@@ -58,12 +58,12 @@ export default function Method() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">The System</span>
+          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">El Proceso</span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
             El <span className="text-red-600">Sistema Wolf</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            A three-phase framework built on sport science, not bro-science. Repeatable. Scalable. Proven.
+            Un marco de tres fases basado en la ciencia del deporte, no en mitos de gimnasio. Repetible. Escalable. Probado.
           </p>
         </motion.div>
 

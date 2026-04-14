@@ -9,34 +9,34 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "I've never lifted a weight before.",
+    question: "¿Nunca he levantado pesas antes?",
     answer:
-      "Every program is tailored to your exact starting point. We build your foundation safely — starting with movement quality, joint stability, and progressive overload principles. There's no prerequisite level of fitness to begin. The starting line is wherever you are today.",
+      "Cada programa se adapta a tu punto de partida exacto. Construimos tu base de forma segura, comenzando por la calidad del movimiento, la estabilidad articular y los principios de sobrecarga progresiva. No hay prerrequisitos de nivel físico para comenzar. La línea de salida es donde tú estés hoy.",
   },
   {
-    question: 'I have a busy schedule.',
+    question: "¿Tengo un horario muy ocupado?",
     answer:
-      "We design 45-minute high-efficiency workouts that fit into executive and parental schedules. Every session is built around the principle of minimum effective dose — maximum stimulus, minimum time waste. If you have 45 focused minutes, three to four times per week, we can drive serious body-recomposition.",
+      "Diseñamos entrenamientos de 45 minutos de alta eficiencia que encajan en agendas de ejecutivos y padres. Cada sesión se basa en el principio de dosis mínima eficaz: máximo estímulo, mínima pérdida de tiempo. Si tienes 45 minutos enfocados de 3 a 4 veces por semana, podemos lograr una recomposición corporal seria.",
   },
   {
-    question: 'Is nutrition included?',
+    question: "¿Se incluye la nutrición?",
     answer:
-      "Yes — a full macro breakdown is provided to ensure your engine is properly fueled. Nutrition is non-negotiable in any performance-optimization protocol. You'll receive a personalized macronutrient target, meal timing guidelines, and food substitution lists adapted to your preferences and lifestyle.",
+      "Sí — se proporciona un desglose completo de macros para garantizar que tu motor esté bien alimentado. La nutrición no es negociable en ningún protocolo de optimización. Recibirás objetivos de macronutrientes personalizados, pautas de tiempo de comida y listas de sustitución adaptadas a tus preferencias.",
   },
   {
-    question: 'How quickly will I see results?',
+    question: "¿Qué tan rápido veré resultados?",
     answer:
-      "Most clients begin noticing meaningful changes within 4–6 weeks: improved energy levels, better sleep, visible strength gains, and early signs of body-recomposition. Significant visual transformation typically occurs between weeks 8–12. Sustainable, lasting results are built over 6+ months of consistent effort.",
+      "La mayoría de los clientes notan cambios significativos en 4-6 semanas: mejores niveles de energía, mejor sueño y ganancias de fuerza visibles. La transformación visual notable suele ocurrir entre las semanas 8-12. Los resultados sostenibles y duraderos se construyen con más de 6 meses de esfuerzo constante.",
   },
   {
-    question: 'What if I travel frequently?',
+    question: "¿Qué pasa si viajo con frecuencia?",
     answer:
-      "Travel-adapted protocols are included in all plans. Hotel room, outdoor, and minimal equipment programs are built into your rotation so your progress never stalls regardless of location. Advanced plan clients receive real-time program adjustments based on travel itineraries.",
+      "Incluimos protocolos adaptados a viajes en todos los planes. Programas para habitación de hotel, aire libre o equipo mínimo están integrados para que tu progreso nunca se detenga. Los clientes del plan avanzado reciben ajustes en tiempo real basados en sus itinerarios de viaje.",
   },
   {
-    question: 'Can I cancel anytime?',
+    question: "¿Puedo cancelar cuando quiera?",
     answer:
-      "Yes — there are no long-term contracts or cancellation fees. You're billed monthly and can cancel before your next billing cycle. We're confident in the results of the Wolf Method and believe retention should be earned through performance, not locked in by contracts.",
+      "Sí — no hay contratos a largo plazo ni tarifas de cancelación. Se factura mensualmente y puedes cancelar antes del siguiente ciclo. Confiamos en los resultados del Método Wolf y creemos que la retención debe ganarse con rendimiento, no con contratos.",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-[#0D0D0D] py-24 px-6 lg:px-8">
+    <section id="faq" className="bg-[#0D0D0D] py-24 px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <motion.div
           ref={ref}
@@ -105,12 +105,12 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">Got Questions?</span>
+          <span className="text-red-500 text-sm font-semibold uppercase tracking-widest">¿Tienes dudas?</span>
           <h2 className="text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
-            Answers to Your <span className="text-red-600">Doubts</span>
+            Respuestas a tus <span className="text-red-600">Preguntas</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg">
-            Doubt is just the starting gate. Let's clear the runway.
+            La duda es solo el punto de partida. Despejemos el camino.
           </p>
         </motion.div>
 
@@ -126,14 +126,14 @@ export default function FAQ() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-14 text-center"
         >
-          <p className="text-gray-400 mb-6">Still have a question? Your evolution can't wait.</p>
+          <p className="text-gray-400 mb-6">¿Aún tienes preguntas? Tu evolución no puede esperar.</p>
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             onClick={scrollToPricing}
-            className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-base transition-colors duration-200 shadow-lg shadow-red-900/30"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-base transition-all duration-200 shadow-lg shadow-red-900/30 hover:shadow-[0_0_25px_rgba(220,38,38,0.6)]"
           >
-            Start My Evolution
+            Empezar mi Evolución
           </motion.button>
         </motion.div>
       </div>

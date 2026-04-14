@@ -5,29 +5,29 @@ Este documento detalla los pasos necesarios para realizar las actualizaciones so
 ## Checklist de Tareas
 
 ### 1. Traducción Completa al Español
-- [ ] **App.tsx**: Traducir enlaces de navegación y botones globales.
-- [ ] **Hero.tsx**: Traducir el título, descripción, estadísticas y etiquetas de la sección principal.
-- [ ] **Method.tsx**: Traducir los 3 pasos del sistema, subtítulos, descripciones y etiquetas.
-- [ ] **Testimonials.tsx**: Traducir los testimonios y los títulos de la sección.
-- [ ] **Pricing.tsx**: Traducir los nombres de los planes, características y botones de compra.
-- [ ] **FAQ.tsx**: Traducir todas las preguntas y respuestas.
-- [ ] **Footer.tsx**: Traducir la información de contacto, enlaces y avisos legales.
+- [x] **App.tsx**: Traducir enlaces de navegación y botones globales.
+- [x] **Hero.tsx**: Traducir el título, descripción, estadísticas y etiquetas de la sección principal.
+- [x] **Method.tsx**: Traducir los 3 pasos del sistema, subtítulos, descripciones y etiquetas.
+- [x] **Testimonials.tsx**: Traducir los testimonios y los títulos de la sección.
+- [x] **Pricing.tsx**: Traducir los nombres de los planes, características y botones de compra.
+- [x] **FAQ.tsx**: Traducir todas las preguntas y respuestas.
+- [x] **Footer.tsx**: Traducir la información de contacto, enlaces y avisos legales.
 
 ### 2. Cambios en la Navegación
-- [ ] Cambiar el texto del botón "Method" por "Sistema" en la barra de navegación superior.
+- [x] Cambiar el texto del botón "Method" por "Sistema" en la barra de navegación superior.
 
 ### 3. Visibilidad de Imagen Hero en Móvil
-- [ ] Modificar `Hero.tsx` para eliminar la clase `hidden lg:block` del contenedor de la imagen.
-- [ ] Ajustar el layout de la sección Hero para que la imagen se vea correctamente debajo del texto en dispositivos móviles.
+- [x] Modificar `Hero.tsx` para eliminar la clase `hidden lg:block` del contenedor de la imagen.
+- [x] Ajustar el layout de la sección Hero para que la imagen se vea correctamente debajo del texto en dispositivos móviles.
 
 ### 4. Imagen Hero Local
-- [ ] Crear el directorio `public/assets` para almacenar recursos locales.
-- [ ] Configurar la ruta de la imagen en `Hero.tsx` para que use el archivo local (ej: `/assets/hero-wolf.jpg`).
-- [ ] *Nota: El usuario debe subir la imagen a esta carpeta.*
+- [x] Crear el directorio `public/assets` para almacenar recursos locales.
+- [x] Configurar la ruta de la imagen en `Hero.tsx` para que use el archivo local (ej: `/assets/hero-wolf.jpg`).
+- [x] *Nota: El usuario debe subir la imagen a esta carpeta.*
 
 ### 5. Animación de Hover en Botones Call to Action (CTA)
-- [ ] Añadir `box-shadow` rojo intenso en el estado hover de los botones principales.
-- [ ] Asegurar que la transición sea suave (`transition-shadow`).
+- [x] Añadir `box-shadow` rojo intenso en el estado hover de los botones principales.
+- [x] Asegurar que la transición sea suave (`transition-shadow`).
 
 ---
 

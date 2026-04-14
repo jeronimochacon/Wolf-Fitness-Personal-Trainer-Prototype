@@ -26,10 +26,10 @@ export default function Footer() {
               <h2 className="text-white font-black text-2xl tracking-tight">
                 ANDRES <span className="text-red-600">WOLF</span>
               </h2>
-              <p className="text-gray-500 text-sm mt-1">Performance Optimization Coach</p>
+              <p className="text-gray-500 text-sm mt-1">Coach de Optimización de Rendimiento</p>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              Science-backed coaching for sustainable body-recomposition and peak performance. No gimmicks. No shortcuts. Just a proven system.
+              Coaching basado en ciencia para una recomposición corporal sostenible y máximo rendimiento. Sin trucos. Sin atajos. Solo un sistema probado.
             </p>
             <div className="flex gap-4">
               {[
@@ -49,9 +49,9 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wide">Programs</h3>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wide">Programas</h3>
             <ul className="flex flex-col gap-3">
-              {['Basic Plan', 'Intermediate Plan', 'Advanced Plan', 'Client Portal'].map((link) => (
+              {['Plan Básico', 'Plan Intermedio', 'Plan Avanzado', 'Portal de Clientes'].map((link) => (
                 <li key={link}>
                   <button
                     onClick={scrollToPricing}
@@ -67,7 +67,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-white font-semibold text-sm uppercase tracking-wide">Legal</h3>
             <ul className="flex flex-col gap-3">
-              {['Privacy Policy', 'Terms of Service', 'Refund Policy', 'Disclaimer'].map((link) => (
+              {['Política de Privacidad', 'Términos de Servicio', 'Política de Reembolso', 'Legal'].map((link) => (
                 <li key={link}>
                   <a href="#" className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200">
                     {link}
@@ -87,7 +87,7 @@ export default function Footer() {
           <div className="flex items-center gap-3 bg-[#1A1A1A] border border-white/5 rounded-xl px-5 py-3">
             <Lock className="w-4 h-4 text-green-500" />
             <span className="text-gray-400 text-sm">
-              Secure Checkout powered by{' '}
+              Pago Seguro con el respaldo de{' '}
               <span className="text-white font-semibold">PayU</span>
             </span>
             <Shield className="w-4 h-4 text-green-500" />
@@ -96,16 +96,16 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-gray-600 text-xs">
               <span className="w-2 h-2 rounded-full bg-green-500" />
-              SSL Secured
+              SSL Seguro
             </div>
             <div className="flex items-center gap-2 text-gray-600 text-xs">
               <span className="w-2 h-2 rounded-full bg-blue-500" />
-              256-bit Encryption
+              Encriptación 256-bit
             </div>
           </div>
 
-          <p className="text-gray-600 text-xs">
-            &copy; {new Date().getFullYear()} Andres Wolf Coaching. All rights reserved.
+          <p className="text-gray-600 text-xs text-center md:text-right">
+            &copy; {new Date().getFullYear()} Andres Wolf Coaching. Todos los derechos reservados.
           </p>
         </motion.div>
       </div>
