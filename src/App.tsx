@@ -35,18 +35,17 @@ function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-[#0A0A0A]/95 backdrop-blur-md border-b border-white/5 shadow-xl'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="text-white font-black text-xl tracking-tight"
         >
-          ANDRES <span className="text-red-600">WOLF</span>
+          <span className="text-red-600">WOLF FITNESS</span>
         </button>
 
         <div className="hidden md:flex items-center gap-8">
