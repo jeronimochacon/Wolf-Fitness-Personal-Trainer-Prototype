@@ -36,8 +36,8 @@ function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-[#0A0A0A]/95 backdrop-blur-md border-b border-white/5 shadow-xl'
-          : 'bg-transparent'
+        ? 'bg-[#0A0A0A]/95 backdrop-blur-md border-b border-white/5 shadow-xl'
+        : 'bg-transparent'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -64,7 +64,7 @@ function Navbar() {
             onClick={() => scrollTo('pricing')}
             className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-5 py-2.5 rounded-lg transition-colors duration-200"
           >
-            Start My Evolution
+            Quiero Cambiar
           </motion.button>
         </div>
 
@@ -97,7 +97,7 @@ function Navbar() {
             onClick={() => scrollTo('pricing')}
             className="bg-red-600 hover:bg-red-700 text-white font-bold text-base px-6 py-3 rounded-xl transition-colors duration-200 text-center"
           >
-            Start My Evolution
+            Quiero Cambiar
           </button>
         </motion.div>
       )}
