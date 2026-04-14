@@ -79,7 +79,7 @@ export default function Hero() {
         >
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] border border-white/5 shadow-2xl">
             <img
-              src="/assets/hero-wolf.jpg"
+              src="/Wolf-Fitness-Personal-Trainer-Prototype/assets/hero-wolf.jpg"
               alt="Entrenamiento de alto rendimiento Wolf Fitness"
               className="w-full h-full object-cover object-center"
             />
