@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Quote } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Testimonial {
   name: string;
@@ -52,6 +52,75 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+function BeforeAfterSlider({ before, after }: { before: string; after: string }) {
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const [isResizing, setIsResizing] = useState(false);
+
+  const handleMove = (e: React.MouseEvent | React.TouchEvent | any) => {
+    if (!isResizing && e.type !== 'touchmove') return;
+    
+    const container = e.currentTarget.getBoundingClientRect();
+    const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const position = ((x - container.left) / container.width) * 100;
+    
+    if (position >= 0 && position <= 100) {
+      setSliderPosition(position);
+    }
+  };
+
+  const handleMouseDown = () => setIsResizing(true);
+  const handleMouseUp = () => setIsResizing(false);
+
+  return (
+    <div 
+      className="relative w-full h-full overflow-hidden cursor-ew-resize select-none touch-none"
+      onMouseMove={handleMove}
+      onTouchMove={handleMove}
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      onTouchEnd={handleMouseUp}
+    >
+      <img
+        src={after}
+        alt="Después"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div 
+        className="absolute inset-0 w-full h-full overflow-hidden"
+        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+      >
+        <img
+          src={before}
+          alt="Antes"
+          className="absolute inset-0 w-full h-full object-cover grayscale"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
+      
+      {/* Slider Handle */}
+      <div 
+        className="absolute inset-y-0 w-0.5 bg-white/50 backdrop-blur-sm z-10"
+        style={{ left: `${sliderPosition}%` }}
+      >
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-red-600 rounded-full border-2 border-white shadow-[0_0_20px_rgba(220,38,38,0.5)] flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+            <div className="flex gap-0.5">
+                <ChevronLeft className="w-4 h-4 text-white" />
+                <ChevronRight className="w-4 h-4 text-white" />
+            </div>
+        </div>
+      </div>
+
+      {/* Labels */}
+      <div className="absolute inset-x-0 bottom-4 px-4 flex justify-between items-center z-20 pointer-events-none">
+        <span className="text-[10px] text-white font-bold bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10 uppercase tracking-tighter shadow-lg">Antes</span>
+        <span className="text-[10px] text-white font-bold bg-red-600/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10 uppercase tracking-tighter shadow-lg">Después</span>
+      </div>
+    </div>
+  );
+}
+
 function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; index: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
@@ -64,27 +133,11 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
       transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
       className="bg-[#1A1A1A] border border-white/5 rounded-2xl overflow-hidden flex flex-col hover:border-red-600/30 transition-colors duration-300 group"
     >
-      <div className="relative h-48 overflow-hidden">
-        <div className="grid grid-cols-2 h-full">
-          <div className="relative overflow-hidden">
-            <img
-              src={testimonial.beforeAfter.before}
-              alt="Antes de la transformación"
-              className="w-full h-full object-cover grayscale"
-            />
-            <div className="absolute inset-0 bg-black/40" />
-            <span className="absolute bottom-2 left-2 text-xs text-white/70 font-medium bg-black/50 px-2 py-0.5 rounded">Antes</span>
-          </div>
-          <div className="relative overflow-hidden">
-            <img
-              src={testimonial.beforeAfter.after}
-              alt="Después de la transformación"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-red-900/20" />
-            <span className="absolute bottom-2 right-2 text-xs text-white/70 font-medium bg-black/50 px-2 py-0.5 rounded">Después</span>
-          </div>
-        </div>
+      <div className="relative h-64 overflow-hidden">
+        <BeforeAfterSlider 
+          before={testimonial.beforeAfter.before} 
+          after={testimonial.beforeAfter.after} 
+        />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent" />
       </div>
 
