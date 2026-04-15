@@ -135,7 +135,7 @@ export default function Testimonials() {
             Transformaciones que <span className="text-red-600">Hablan</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            Cada viaje de recomposición corporal es único. Mira lo que mis clientes han logrado con programación basada en ciencia.
+            Cada cambio es único. Mira lo que mis clientes han logrado con planificación basada en ciencia.
           </p>
         </motion.div>
 
