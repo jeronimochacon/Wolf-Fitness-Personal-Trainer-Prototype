@@ -23,7 +23,7 @@ export default function Footer() {
         >
           <div className="lg:col-span-2 flex flex-col gap-6">
             <div>
-              <h2 className="text-white font-black text-2xl tracking-tight">
+              <h2 translate="no" className="text-white font-black text-2xl tracking-tight">
                 ANDRES <span className="text-red-600">WOLF</span>
               </h2>
               <p className="text-gray-500 text-sm mt-1">Coach de Optimización de Rendimiento</p>
@@ -57,7 +57,7 @@ export default function Footer() {
                     onClick={scrollToPricing}
                     className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200"
                   >
-                    {link}
+                    <span translate="no">{link}</span>
                   </button>
                 </li>
               ))}
@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-600 text-xs text-center md:text-right">
-            &copy; {new Date().getFullYear()} Andres Wolf Coaching. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} <span translate="no">Andres Wolf Coaching</span>. Todos los derechos reservados.
           </p>
         </motion.div>
       </div>

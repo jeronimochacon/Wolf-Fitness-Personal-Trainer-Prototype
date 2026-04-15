@@ -222,7 +222,7 @@ export default function Pricing() {
             Elige tu <span className="text-red-600">Camino</span>
           </h2>
           <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
-            Sin contratos a largo plazo. Cancela cuando quieras. Cada plan incluye acceso al Método Wolf.
+            Sin contratos a largo plazo. Cancela cuando quieras. <span translate="no">Cada plan incluye acceso al Método Wolf.</span>
           </p>
         </motion.div>
 
@@ -238,7 +238,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-gray-600 text-sm mt-10"
         >
-          Todos los planes incluyen garantía de devolución de 7 días. Pago seguro vía PayU.
+          <span translate="no">Todos los planes incluyen garantía de devolución de 7 días. Pago seguro vía PayU.</span>
         </motion.p>
       </div>
     </section>

@@ -42,7 +42,7 @@ export default function Hero() {
               onClick={scrollToPricing}
               className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-red-900/40 hover:shadow-[0_0_25px_rgba(220,38,38,0.6)]"
             >
-              Unirme a <br /> Wolf Family
+              <span translate="no">Unirme a <br /> Wolf Family</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
             </motion.button>
             <div className="flex items-center gap-3 text-gray-400 text-sm pt-1 sm:pt-7">
@@ -96,7 +96,7 @@ export default function Hero() {
                   <span className="text-white font-bold text-sm">AW</span>
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">Andres Wolf</p>
+                  <p translate="no" className="text-white font-semibold text-sm">Andres Wolf</p>
                   <p className="text-gray-400 text-xs">Coach Fitness Certificado</p>
                 </div>
                 <div className="ml-auto flex gap-1">

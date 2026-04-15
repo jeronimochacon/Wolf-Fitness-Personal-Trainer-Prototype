@@ -19,24 +19,24 @@ Este plan detalla los cambios necesarios para evitar que los navegadores (como G
 ## Checklist de Tareas
 
 ### 1. Configuración Global
-- [ ] Modificar `index.html`: Cambiar `<html lang="en">` a `<html lang="es">`.
+- [x] Modificar `index.html`: Cambiar `<html lang="en">` a `<html lang="es">`.
 
 ### 2. Header / Navbar (`App.tsx`)
-- [ ] Aplicar `translate="no"` al logo "WOLF FAMILY".
+- [x] Aplicar `translate="no"` al logo "WOLF FAMILY".
 
 ### 3. Hero Section (`src/components/Hero.tsx`)
-- [ ] Aplicar `translate="no"` al botón CTA que dice "Unirme a Wolf Family".
-- [ ] Aplicar `translate="no"` al nombre "Andres Wolf" en la tarjeta del coach.
+- [x] Aplicar `translate="no"` al botón CTA que dice "Unirme a Wolf Family".
+- [x] Aplicar `translate="no"` al nombre "Andres Wolf" en la tarjeta del coach.
 
 ### 4. Sección de Precios (`src/components/Pricing.tsx`)
-- [ ] Aplicar `translate="no"` a los títulos de los planes ("Básico", "Intermedio", "Avanzado").
-- [ ] Aplicar `translate="no"` a la palabra "Planes" en el encabezado de la sección si existe.
-- [ ] Revisar el texto "Cada plan incluye acceso al Método Wolf" en la cabecera de la sección.
+- [x] Aplicar `translate="no"` a los títulos de los planes ("Básico", "Intermedio", "Avanzado").
+- [x] Aplicar `translate="no"` a la palabra "Planes" en el encabezado de la sección si existe.
+- [x] Revisar el texto "Cada plan incluye acceso al Método Wolf" en la cabecera de la sección.
 
 ### 5. Footer (`src/components/Footer.tsx`)
-- [ ] Aplicar `translate="no"` al nombre "ANDRES WOLF" en el footer.
-- [ ] Aplicar `translate="no"` al texto del copyright "Andres Wolf Coaching".
-- [ ] Asegurar que la lista de programas ("Plan Básico", etc.) tenga protección contra traducción.
+- [x] Aplicar `translate="no"` al nombre "ANDRES WOLF" en el footer.
+- [x] Aplicar `translate="no"` al texto del copyright "Andres Wolf Coaching".
+- [x] Asegurar que la lista de programas ("Plan Básico", etc.) tenga protección contra traducción.
 
 ### 6. Verificación Final
 - [ ] Abrir la página en Google Chrome.
