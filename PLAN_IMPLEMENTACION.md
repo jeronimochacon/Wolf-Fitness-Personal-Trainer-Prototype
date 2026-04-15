@@ -1,41 +1,50 @@
-# Plan de Implementación - Actualización de UI y Testimonios
+# Plan de Implementación - Ajustes de Traducción Automática
 
-Este documento detalla los pasos necesarios para corregir el problema de transparencia en el menú móvil y añadir la funcionalidad interactiva de "Antes y Después" en los testimonios.
+Este plan detalla los cambios necesarios para evitar que los navegadores (como Google Chrome) traduzcan incorrectamente nombres propios y términos específicos de la marca "Wolf Fitness".
 
-## 1. Corrección del Menú Hamburguesa (Navbar)
-**Problema:** El fondo del encabezado es transparente cuando no se ha hecho scroll, incluso si el menú está abierto, lo que dificulta la legibilidad en dispositivos móviles.
-**Solución:** Modificar la lógica de clases en el componente `Navbar` para que el fondo sea oscuro si el menú está abierto (`menuOpen`) O si el usuario ha hecho scroll (`scrolled`).
+## Objetivos
+- Evitar la traducción de "Wolf Family" a "Familia de Lobos".
+- Evitar la traducción del nombre "Andres Wolf" a "Andres Lobo".
+- Asegurar que el CTA "Unirme a Wolf Family" se mantenga íntegro.
+- Evitar que la palabra "Planes" sea traducida como "Aviones" en la sección de precios.
+- Corregir el idioma base de la página para reducir la activación innecesaria del traductor.
 
-- [x] Modificar `src/App.tsx`: Actualizar la condición de `className` en el elemento `motion.nav`.
-- [x] Asegurar que el fondo del menú desplegable (`motion.div`) mantenga su opacidad y diseño premium.
-
-## 2. Galería de Testimonios Interactiva (Antes/Después)
-**Problema:** Las imágenes de antes y después se muestran estáticas una al lado de la otra.
-**Solución:** Implementar un componente de slider interactivo donde el usuario pueda deslizar una barra horizontal para comparar el "Antes" (izquierda) y el "Después" (derecha) en la misma imagen.
-
-### Detalles Técnicos:
-- Se utilizará un estado local para controlar la posición del slider (0% a 100%).
-- La imagen del "Antes" estará en el fondo y la del "Después" se superpondrá con un `clip-path` o ancho variable.
-- Se añadirá una barra de control vertical con un manejador (handle) estilizado.
-
-- [x] Crear el sub-componente `BeforeAfterSlider` dentro de `src/components/Testimonials.tsx`.
-- [x] Implementar la lógica de interacción (mouse y touch) para el deslizamiento.
-- [x] Actualizar `TestimonialCard` para reemplazar el `grid grid-cols-2` actual por el nuevo `BeforeAfterSlider`.
-- [x] Estilizar el "handle" del slider con colores de marca (Rojo Wolf / Blanco) y efectos de hover.
-- [x] Asegurar la responsividad del slider en móviles.
-
-## Checklist de Progreso
-
-### Navbar
-- [x] Fondo oscuro forzado con menú abierto.
-- [x] Transición suave entre estados.
-
-### Testimonios
-- [x] Estructura base del slider terminada.
-- [x] Lógica de deslizamiento funcional (Click/Touch & Drag).
-- [x] Etiquetas "Antes" y "Después" integradas en el slider.
-- [x] Diseño visual pulido (Premium Aesthetics).
-- [x] Verificación en diferentes tamaños de pantalla.
+## Estrategia Técnica
+1. **Cambio de Idioma HTML**: Cambiar el atributo `lang="en"` por `lang="es"` en `index.html` para indicar correctamente que el contenido es en español.
+2. **Atributo `translate="no"`**: Utilizar el atributo estándar de HTML5 `translate="no"` en los elementos que contienen texto sensible.
+3. **Clase `notranslate`**: Opcionalmente, añadir la clase CSS `notranslate` que es reconocida por Google Translate para mayor compatibilidad.
 
 ---
-**Nota:** No se debe modificar la estructura de datos existente de los testimonios, ya que ya cuenta con los campos `beforeAfter.before` y `beforeAfter.after`.
+
+## Checklist de Tareas
+
+### 1. Configuración Global
+- [ ] Modificar `index.html`: Cambiar `<html lang="en">` a `<html lang="es">`.
+
+### 2. Header / Navbar (`App.tsx`)
+- [ ] Aplicar `translate="no"` al logo "WOLF FAMILY".
+
+### 3. Hero Section (`src/components/Hero.tsx`)
+- [ ] Aplicar `translate="no"` al botón CTA que dice "Unirme a Wolf Family".
+- [ ] Aplicar `translate="no"` al nombre "Andres Wolf" en la tarjeta del coach.
+
+### 4. Sección de Precios (`src/components/Pricing.tsx`)
+- [ ] Aplicar `translate="no"` a los títulos de los planes ("Básico", "Intermedio", "Avanzado").
+- [ ] Aplicar `translate="no"` a la palabra "Planes" en el encabezado de la sección si existe.
+- [ ] Revisar el texto "Cada plan incluye acceso al Método Wolf" en la cabecera de la sección.
+
+### 5. Footer (`src/components/Footer.tsx`)
+- [ ] Aplicar `translate="no"` al nombre "ANDRES WOLF" en el footer.
+- [ ] Aplicar `translate="no"` al texto del copyright "Andres Wolf Coaching".
+- [ ] Asegurar que la lista de programas ("Plan Básico", etc.) tenga protección contra traducción.
+
+### 6. Verificación Final
+- [ ] Abrir la página en Google Chrome.
+- [ ] Forzar la traducción (si aún aparece la opción) y verificar que los términos protegidos no cambien.
+- [ ] Verificar que "planes" ya no se convierta en "aviones".
+
+---
+
+## Notas Adicionales
+- El atributo `translate="no"` es la forma más limpia y moderna de manejar esto sin afectar el SEO o el diseño.
+- Al cambiar el `lang` a `es`, Chrome debería dejar de ofrecer traducir la página automáticamente a los usuarios que ya tienen el español como idioma preferido.
