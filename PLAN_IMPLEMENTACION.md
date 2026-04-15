@@ -1,47 +1,41 @@
-# Plan de Implementación: Actualización Wolf Fitness Personal Trainer
+# Plan de Implementación - Actualización de UI y Testimonios
 
-Este documento detalla los pasos necesarios para realizar las actualizaciones solicitadas en el prototipo de Wolf Fitness.
+Este documento detalla los pasos necesarios para corregir el problema de transparencia en el menú móvil y añadir la funcionalidad interactiva de "Antes y Después" en los testimonios.
 
-## Checklist de Tareas
+## 1. Corrección del Menú Hamburguesa (Navbar)
+**Problema:** El fondo del encabezado es transparente cuando no se ha hecho scroll, incluso si el menú está abierto, lo que dificulta la legibilidad en dispositivos móviles.
+**Solución:** Modificar la lógica de clases en el componente `Navbar` para que el fondo sea oscuro si el menú está abierto (`menuOpen`) O si el usuario ha hecho scroll (`scrolled`).
 
-### 1. Traducción Completa al Español
-- [x] **App.tsx**: Traducir enlaces de navegación y botones globales.
-- [x] **Hero.tsx**: Traducir el título, descripción, estadísticas y etiquetas de la sección principal.
-- [x] **Method.tsx**: Traducir los 3 pasos del sistema, subtítulos, descripciones y etiquetas.
-- [x] **Testimonials.tsx**: Traducir los testimonios y los títulos de la sección.
-- [x] **Pricing.tsx**: Traducir los nombres de los planes, características y botones de compra.
-- [x] **FAQ.tsx**: Traducir todas las preguntas y respuestas.
-- [x] **Footer.tsx**: Traducir la información de contacto, enlaces y avisos legales.
+- [ ] Modificar `src/App.tsx`: Actualizar la condición de `className` en el elemento `motion.nav`.
+- [ ] Asegurar que el fondo del menú desplegable (`motion.div`) mantenga su opacidad y diseño premium.
 
-### 2. Cambios en la Navegación
-- [x] Cambiar el texto del botón "Method" por "Sistema" en la barra de navegación superior.
+## 2. Galería de Testimonios Interactiva (Antes/Después)
+**Problema:** Las imágenes de antes y después se muestran estáticas una al lado de la otra.
+**Solución:** Implementar un componente de slider interactivo donde el usuario pueda deslizar una barra horizontal para comparar el "Antes" (izquierda) y el "Después" (derecha) en la misma imagen.
 
-### 3. Visibilidad de Imagen Hero en Móvil
-- [x] Modificar `Hero.tsx` para eliminar la clase `hidden lg:block` del contenedor de la imagen.
-- [x] Ajustar el layout de la sección Hero para que la imagen se vea correctamente debajo del texto en dispositivos móviles.
+### Detalles Técnicos:
+- Se utilizará un estado local para controlar la posición del slider (0% a 100%).
+- La imagen del "Antes" estará en el fondo y la del "Después" se superpondrá con un `clip-path` o ancho variable.
+- Se añadirá una barra de control vertical con un manejador (handle) estilizado.
 
-### 4. Imagen Hero Local
-- [x] Crear el directorio `public/assets` para almacenar recursos locales.
-- [x] Configurar la ruta de la imagen en `Hero.tsx` para que use el archivo local (ej: `/assets/hero-wolf.jpg`).
-- [x] *Nota: El usuario debe subir la imagen a esta carpeta.*
+- [ ] Crear el sub-componente `BeforeAfterSlider` dentro de `src/components/Testimonials.tsx`.
+- [ ] Implementar la lógica de interacción (mouse y touch) para el deslizamiento.
+- [ ] Actualizar `TestimonialCard` para reemplazar el `grid grid-cols-2` actual por el nuevo `BeforeAfterSlider`.
+- [ ] Estilizar el "handle" del slider con colores de marca (Rojo Wolf / Blanco) y efectos de hover.
+- [ ] Asegurar la responsividad del slider en móviles.
 
-### 5. Animación de Hover en Botones Call to Action (CTA)
-- [x] Añadir `box-shadow` rojo intenso en el estado hover de los botones principales.
-- [x] Asegurar que la transición sea suave (`transition-shadow`).
+## Checklist de Progreso
+
+### Navbar
+- [ ] Fondo oscuro forzado con menú abierto.
+- [ ] Transición suave entre estados.
+
+### Testimonios
+- [ ] Estructura base del slider terminada.
+- [ ] Lógica de deslizamiento funcional (Click/Touch & Drag).
+- [ ] Etiquetas "Antes" y "Después" integradas en el slider.
+- [ ] Diseño visual pulido (Premium Aesthetics).
+- [ ] Verificación en diferentes tamaños de pantalla.
 
 ---
-
-## Detalles Técnicos
-
-### Localización
-Se reemplazará todo el contenido estático en inglés por su equivalente en español directamente en los componentes de React.
-
-### Estilos (Tailwind CSS)
-| Elemento | Cambio Sugerido |
-| :--- | :--- |
-| **Imagen Hero** | Cambiar `hidden lg:block` a `block w-full mt-12 lg:mt-0` |
-| **Botones CTA** | Añadir `hover:shadow-[0_0_25px_rgba(220,38,38,0.6)]` |
-
-### Estructura de Archivos
-Se recomienda la siguiente ruta para la nueva imagen:
-`./public/assets/hero-wolf.jpg`
+**Nota:** No se debe modificar la estructura de datos existente de los testimonios, ya que ya cuenta con los campos `beforeAfter.before` y `beforeAfter.after`.
