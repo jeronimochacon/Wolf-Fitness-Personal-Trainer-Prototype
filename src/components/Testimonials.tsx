@@ -22,20 +22,20 @@ const testimonials: Testimonial[] = [
     resultLabel: 'Reducción de Grasa',
     image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200',
     beforeAfter: {
-      before: 'https://images.pexels.com/photos/4164761/pexels-photo-4164761.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400',
+      before: 'https://sharkmindset.fit/wp-content/uploads/2025/09/DAN-Antes.avif',
+      after: 'https://sharkmindset.fit/wp-content/uploads/2025/09/DAN-Despues.avif',
     },
   },
   {
     name: 'Sarah J.',
     handle: 'Transformación Posparto',
     quote: 'El enfoque personalizado para mi recuperación específica fue exactamente lo que necesitaba.',
-    result: '−12 kg',
+    result: '+12 kg',
     resultLabel: 'Recuperación Técnica',
     image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
     beforeAfter: {
-      before: 'https://images.pexels.com/photos/4164766/pexels-photo-4164766.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg?auto=compress&cs=tinysrgb&w=400',
+      before: 'https://sharkmindset.fit/wp-content/uploads/2025/09/Mar-Antes.avif',
+      after: 'https://sharkmindset.fit/wp-content/uploads/2025/09/Mar-Despues.avif',
     },
   },
   {
@@ -46,8 +46,8 @@ const testimonials: Testimonial[] = [
     resultLabel: 'Fuerza & Masa Muscular',
     image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200',
     beforeAfter: {
-      before: 'https://images.pexels.com/photos/4164513/pexels-photo-4164513.jpeg?auto=compress&cs=tinysrgb&w=400',
-      after: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=400',
+      before: 'https://sharkmindset.fit/wp-content/uploads/2025/09/Esteban-Antes.avif',
+      after: 'https://sharkmindset.fit/wp-content/uploads/2025/09/Esteban-Despues.avif',
     },
   },
 ];
@@ -58,11 +58,11 @@ function BeforeAfterSlider({ before, after }: { before: string; after: string })
 
   const handleMove = (e: React.MouseEvent | React.TouchEvent | any) => {
     if (!isResizing && e.type !== 'touchmove') return;
-    
+
     const container = e.currentTarget.getBoundingClientRect();
     const x = 'touches' in e ? e.touches[0].clientX : e.clientX;
     const position = ((x - container.left) / container.width) * 100;
-    
+
     if (position >= 0 && position <= 100) {
       setSliderPosition(position);
     }
@@ -72,7 +72,7 @@ function BeforeAfterSlider({ before, after }: { before: string; after: string })
   const handleMouseUp = () => setIsResizing(false);
 
   return (
-    <div 
+    <div
       className="relative w-full h-full overflow-hidden cursor-ew-resize select-none touch-none"
       onMouseMove={handleMove}
       onTouchMove={handleMove}
@@ -87,7 +87,7 @@ function BeforeAfterSlider({ before, after }: { before: string; after: string })
         alt="Después"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div 
+      <div
         className="absolute inset-0 w-full h-full overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
@@ -98,17 +98,17 @@ function BeforeAfterSlider({ before, after }: { before: string; after: string })
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
-      
+
       {/* Slider Handle */}
-      <div 
+      <div
         className="absolute inset-y-0 w-0.5 bg-white/50 backdrop-blur-sm z-10"
         style={{ left: `${sliderPosition}%` }}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-red-600 rounded-full border-2 border-white shadow-[0_0_20px_rgba(220,38,38,0.5)] flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-            <div className="flex gap-0.5">
-                <ChevronLeft className="w-4 h-4 text-white" />
-                <ChevronRight className="w-4 h-4 text-white" />
-            </div>
+          <div className="flex gap-0.5">
+            <ChevronLeft className="w-4 h-4 text-white" />
+            <ChevronRight className="w-4 h-4 text-white" />
+          </div>
         </div>
       </div>
 
@@ -134,9 +134,9 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
       className="bg-[#1A1A1A] border border-white/5 rounded-2xl overflow-hidden flex flex-col hover:border-red-600/30 transition-colors duration-300 group"
     >
       <div className="relative h-64 overflow-hidden">
-        <BeforeAfterSlider 
-          before={testimonial.beforeAfter.before} 
-          after={testimonial.beforeAfter.after} 
+        <BeforeAfterSlider
+          before={testimonial.beforeAfter.before}
+          after={testimonial.beforeAfter.after}
         />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent" />
       </div>
